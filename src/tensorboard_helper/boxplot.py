@@ -132,36 +132,36 @@ def read_csv_result(filename):
     return data1, tags1
 
 
-if __name__ == "__main__":
-    # read csv file
-
-    fig = plt.figure(constrained_layout=True, figsize=(10.8, 8.4))
-    gs = GridSpec(2, 1, figure=fig, hspace=0)
-    ax1 = fig.add_subplot(gs[0])
-    ax2 = fig.add_subplot(gs[1])
-
-    filenames = ['../../results/baseline_ASD.csv', '../../results/learned_ASD.csv', '../../results/vxm_asd.csv']
-    asd_pre_registration = {'brain stem': 1.85,
-                            'left accumbens': 1.20, 'right accumbens': 1.13,
-                            'left amygdala': 2.18, 'right amygdala': 1.44,
-                            'left caudate': 1.37, 'right caudate': 1.44,
-                            'left hippocampus': 1.45, 'right hippocampus': 1.60,
-                            'left pallidum': 1.56, 'right pallidum': 1.12,
-                            'left putamen': 1.30, 'right putamen': 1.02,
-                            'left thalamus': 0.90, 'right thalamus': 0.67}
-    draw_boxplot(filenames, pre_reg_value=None, ax=ax1, title='average surface distance (mm)', on_top=True)
-
-    filenames = ['../../results/baseline_DSC.csv', '../../results/learned_DSC.csv', '../../results/vxm_dice.csv']
-    dsc_pre_registration = {'brain stem': 0.815,
-                            'left accumbens': 0.593, 'right accumbens': 0.653,
-                            'left amygdala': 0.335, 'right amygdala': 0.644,
-                            'left caudate': 0.705, 'right caudate': 0.813,
-                            'left hippocampus': 0.708, 'right hippocampus': 0.665,
-                            'left pallidum': 0.673, 'right pallidum': 0.794,
-                            'left putamen': 0.772, 'right putamen': 0.812,
-                            'left thalamus': 0.896, 'right thalamus': 0.920}
-    draw_boxplot(filenames, pre_reg_value=None, ax=ax2, title='Dice score')
-
-
-    fig.savefig('../../results/boxplot.pdf')
-    fig.show()
+# if __name__ == "__main__":
+#     # read csv file
+#
+#     fig = plt.figure(constrained_layout=True, figsize=(10.8, 8.4))
+#     gs = GridSpec(2, 1, figure=fig, hspace=0)
+#     ax1 = fig.add_subplot(gs[0])
+#     ax2 = fig.add_subplot(gs[1])
+#
+#     filenames = ['../../results/baseline_ASD.csv', '../../results/learned_ASD.csv', '../../results/vxm_asd.csv']
+#     asd_pre_registration = {'brain stem': 1.85,
+#                             'left accumbens': 1.20, 'right accumbens': 1.13,
+#                             'left amygdala': 2.18, 'right amygdala': 1.44,
+#                             'left caudate': 1.37, 'right caudate': 1.44,
+#                             'left hippocampus': 1.45, 'right hippocampus': 1.60,
+#                             'left pallidum': 1.56, 'right pallidum': 1.12,
+#                             'left putamen': 1.30, 'right putamen': 1.02,
+#                             'left thalamus': 0.90, 'right thalamus': 0.67}
+#     draw_boxplot(filenames, pre_reg_value=None, ax=ax1, title='average surface distance (mm)', on_top=True)
+#
+#     filenames = ['../../results/baseline_DSC.csv', '../../results/learned_DSC.csv', '../../results/vxm_dice.csv']
+#     dsc_pre_registration = {'brain stem': 0.815,
+#                             'left accumbens': 0.593, 'right accumbens': 0.653,
+#                             'left amygdala': 0.335, 'right amygdala': 0.644,
+#                             'left caudate': 0.705, 'right caudate': 0.813,
+#                             'left hippocampus': 0.708, 'right hippocampus': 0.665,
+#                             'left pallidum': 0.673, 'right pallidum': 0.794,
+#                             'left putamen': 0.772, 'right putamen': 0.812,
+#                             'left thalamus': 0.896, 'right thalamus': 0.920}
+#     draw_boxplot(filenames, pre_reg_value=None, ax=ax2, title='Dice score')
+#
+#
+#     fig.savefig('../../results/boxplot.pdf')
+#     fig.show()

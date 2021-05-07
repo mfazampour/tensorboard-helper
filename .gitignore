@@ -1,1 +1,4 @@
 /.idea
+/build
+/dist
+/src/tb_helper.egg-info
